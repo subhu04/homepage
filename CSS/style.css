@@ -896,4 +896,28 @@ html {
     right: 10px;
   }
 
+
+
+  .animation {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: appear;
+    animation-range-end: contain 50%;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+  
+    to {
+      opacity: 1,
+      transform: scaleX(1);
+    }
+  }
+
    
